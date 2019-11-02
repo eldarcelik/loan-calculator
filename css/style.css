@@ -33,6 +33,15 @@ body {
   letter-spacing: 2.5px;
 }
 
+#loan-form {
+  margin-bottom: 21px;
+}
+
+.errorMessage {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .input-container {
   display: flex;
   width: 80%;

@@ -1,3 +1,31 @@
+const clearError = () => {
+  // Remove error message
+  document.querySelector('.alert').remove();
+  // Restore previous Frame1 height  
+  document.querySelector('#frame1').style.height = '345px';
+}
+
+const showError = (error) => {
+  const insertAfter = (el, referenceNode) => {
+      referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
+  } 
+  
+  // Create a div
+   const errorDiv = document.createElement('div');
+   // Get elements
+   const form = document.querySelector('#loan-form');
+   // Add class
+   errorDiv.className = 'alert alert-danger text-center errorMessage';
+   // Create text node and append to div
+   errorDiv.appendChild(document.createTextNode(error));
+  // Extend Frame
+  document.querySelector('#frame1').style.height = '415px';
+  // Insert after form element
+  insertAfter(errorDiv, form);
+  // Clear error after 3 seconds
+  setTimeout(clearError, 2500);
+}
+
 const calculateResults = () => {
   // UI Vars
   const amount = document.getElementById('amount');
@@ -22,13 +50,13 @@ const calculateResults = () => {
 
     // Show results
     document.getElementById('frame2').style.display = 'block';
-
     // Hide loader
     document.querySelector('.lds-spinner').style.display = 'none';
 
   } else {
-    alert('Please check your numbers');
-    document.querySelector('.lds-spinner').style.display = 'none';
+    // Show Error
+    showError('Please check your numbers');
+    document.querySelector('.lds-spinner').style.display = 'none';    
   }
 }
 
@@ -37,6 +65,8 @@ document.getElementById('loan-form').addEventListener('submit', (e) => {
 
   // Show loader
   document.querySelector('.lds-spinner').style.display = 'block';
+  // Hide Results
+  document.getElementById('frame2').style.display = 'none';
 
   // Calculate 
   setTimeout(calculateResults, 1500);
