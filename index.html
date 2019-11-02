@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/loader.css">
+	<script src="https://kit.fontawesome.com/bdb4832c2c.js" crossorigin="anonymous"></script>
+	<title>Loan Calculator</title>
+<body>
+
+	<div id="frame1">
+		<h2 class="heading">Loan Calculator</h2>
+		<form id="loan-form">
+			<div class="input-container">
+				<i class="fas fa-euro-sign icon"></i>
+				<input type="number" id="amount" class="input" placeholder="Loan Amount">
+			</div>
+			<div class="input-container">
+				<i class="fas fa-percent icon"></i>
+				<input type="number" id="interest" class="input" placeholder="Interest">
+			</div>
+			<div class="input-container">
+				<i class="far fa-calendar icon"></i>
+				<input type="number" id="years" class="input" placeholder="Years To Repay">
+			</div>
+			<input type="submit" value="Calculate" id="submit-form" class="btn btn-primary">
+		</form>
+	</div>
+	
+	<div class="lds-spinner">
+		<div></div><div></div><div></div><div></div><div></div><div></div>
+		<div></div><div></div><div></div><div></div><div></div><div></div>
+	</div>
+
+	<div id="frame2">
+		<h2 class="heading">Results</h2>
+			<div class="results-container">
+				<div class="results">
+					<span class="result-tabs">Monthly Payment</span>
+					<span id="monthly-payment" class="result-number"></span>
+				</div>
+			</div>
+			<div class="results-container">
+				<div class="results">
+					<span class="result-tabs">Total Payment</span> 
+					<span id="total-payment" class="result-number"></span> 
+				</div>
+			</div>
+			<div class="results-container">
+				<div class="results">
+					<span class="result-tabs">Total Interest</span> 
+					<span id="total-interest" class="result-number"></span> 
+				</div>
+			</div>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
