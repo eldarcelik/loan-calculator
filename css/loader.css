@@ -1,6 +1,6 @@
 /* Loader Animation */
 .lds-spinner {
-    display: block;
+    display: none;
     width: 64px;
     height: 64px;
     margin: auto;

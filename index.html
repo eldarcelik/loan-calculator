@@ -13,10 +13,10 @@
 
 	<div id="frame1">
 		<h2 class="heading">Loan Calculator</h2>
-		<form>
+		<form id="loan-form">
 			<div class="input-container">
 				<i class="fas fa-euro-sign icon"></i>
-				<input type="number" id="amount"class="input" placeholder="Loan Amount">
+				<input type="number" id="amount" class="input" placeholder="Loan Amount">
 			</div>
 			<div class="input-container">
 				<i class="fas fa-percent icon"></i>
@@ -29,9 +29,8 @@
 			<input type="submit" value="Calculate" id="submit-form" class="btn btn-primary">
 		</form>
 	</div>
-
 	
-	<div class="lds-spinner" style="display: none;">
+	<div class="lds-spinner">
 		<div></div><div></div><div></div><div></div><div></div><div></div>
 		<div></div><div></div><div></div><div></div><div></div><div></div>
 	</div>
