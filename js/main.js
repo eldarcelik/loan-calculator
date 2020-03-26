@@ -9,7 +9,6 @@ const showError = (error) => {
   const insertAfter = (el, referenceNode) => {
       referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
   } 
-  
   // Create a div
    const errorDiv = document.createElement('div');
    // Get elements
@@ -27,7 +26,6 @@ const showError = (error) => {
 }
 
 const calculateResults = () => {
-  // UI Vars
   const amount = document.getElementById('amount');
   const interest = document.getElementById('interest');
   const years = document.getElementById('years');
@@ -62,12 +60,10 @@ const calculateResults = () => {
 
 document.getElementById('loan-form').addEventListener('submit', (e) => {
   e.preventDefault();
-
   // Show loader
   document.querySelector('.lds-spinner').style.display = 'block';
   // Hide Results
   document.getElementById('frame2').style.display = 'none';
-
   // Calculate 
   setTimeout(calculateResults, 1500);
 });
